@@ -1,59 +1,31 @@
 import React, { Component } from 'react'
-import { Container, Row, Col } from 'reactstrap'
+import { Container } from 'reactstrap'
 
-import FlipCard from './FlipCard'
+import CardRow from './components/CardRow'
 
-import './CardBoard.css'
+import './styles/CardBoard.css'
+
+const rows = 4;
+const cols = 4;
 
 class CardBoard extends Component {
-  render() {
-    return (
-      <Container>
-        <Row>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3" sm="3" lg="3">
-            <FlipCard />
-          </Col>
-        </Row>
-      </Container>
-    )
-  }
+
+
+
+    render() {
+
+        var rowsDom = [];
+        for ( var i = 0; i < rows; i++ ) {
+            rowsDom.push(
+                <CardRow cols={cols} key={`row${i}`} />
+            );
+        }
+        return (
+            <Container>
+                {rowsDom}
+            </Container>
+        )
+    }
 }
 
 export default CardBoard
