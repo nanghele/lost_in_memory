@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Container, Row, Col } from 'reactstrap'
 
 import FlipCard from './FlipCard'
+
 import './CardBoard.css'
 
 class CardBoard extends Component {
@@ -9,44 +10,44 @@ class CardBoard extends Component {
     return (
       <Container>
         <Row>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
-          <Col xs="3">
-            <FlipCard />
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3">
-            <FlipCard />
-          </Col>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
         </Row>
         <Row>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
-          <Col xs="3">
+          <Col xs="3" sm="3" lg="3">
+            <FlipCard />
+          </Col>
+        </Row>
+        <Row>
+          <Col xs="3" sm="3" lg="3">
+            <FlipCard />
+          </Col>
+          <Col xs="3" sm="3" lg="3">
+            <FlipCard />
+          </Col>
+          <Col xs="3" sm="3" lg="3">
+            <FlipCard />
+          </Col>
+          <Col xs="3" sm="3" lg="3">
             <FlipCard />
           </Col>
         </Row>
