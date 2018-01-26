@@ -1,22 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class FlipCard extends React.Component {
-
-    render() {
-        const { isFlipped } = this.props;
-        return (
-            <div style={{ margin: '1px' }}>
-                {isFlipped ? this.props.children[1] : this.props.children[0]
-                }
-            </div>
-        )
-    }
-
-}
+const FlipCard = ( { isFlipped, front, back } ) => (
+    <div style={{ margin: '1px' }}>
+        {isFlipped ? back : front}
+    </div>
+)
 
 FlipCard.propTypes = {
     isFlipped: PropTypes.bool.isRequired,
+    front: PropTypes.objectOf( React.Component ).isRequired,
+    back: PropTypes.objectOf( React.Component ).isRequired
 };
 
 export default FlipCard
