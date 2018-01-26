@@ -11,32 +11,24 @@ class Card extends React.Component {
         this.props.onFlip( this.props.card );
     }
 
-    renderBack = () => (
-        <div key="back">
-            <div style={[styles.cardView, styles.frontView]}>
-                <img alt={`${this.props.children} back`}
-                    style={styles.cardImage}
-                    src={this.props.children}
-                />
-            </div>
-        </div>
-    );
-
-    renderFront = () => (
-        <div onClick={this.flip} key="front">
-            <img alt="front"
-                style={styles.cardImage}
-                src="card-back.png"
-            />
-        </div>
-    );
-
     render() {
+        
+        const cardFront =         
+            (<div onClick={this.flip} key="front">
+                    <img alt="front"
+                    style={styles.cardImage}
+                    src="card-back.png"/>
+            </div>)
+            
+        const cardBack = 
+            (<div style={[styles.cardView, styles.frontView]}>
+                    <img alt={`${this.props.children} back`}
+                        style={styles.cardImage}
+                        src={this.props.children}/>
+                </div>)
+                
         return (
-            <FlipCard isFlipped={this.props.card.flipped}>
-                {this.renderFront()}
-                {this.renderBack()}
-            </FlipCard>
+            <FlipCard isFlipped={this.props.card.flipped} front={cardFront} back={cardBack}/>
         );
     }
 }
